@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COVIDNOW Archive — Historic Releases & Wayback Machine</title>
+  <meta name="description" content="Explore historic releases, pull requests, and Wayback Machine snapshots of COVIDNOW, Malaysia's official pandemic dashboard." />
+  
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="COVIDNOW Archive — Historic Releases & Wayback Machine" />
+  <meta property="og:description" content="Explore historic releases, pull requests, and Wayback Machine snapshots of COVIDNOW (covidnow.moh.gov.my), built by 4 volunteer developers in 3 weeks, serving 100M+ views with 0 downtime." />
+  <meta property="og:image" content="https://limhenry.xyz/images/projects/covidnow.webp" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="COVIDNOW Archive — Historic Releases & Wayback Machine" />
+  <meta name="twitter:description" content="Explore historic releases, pull requests, and Wayback Machine snapshots of COVIDNOW, Malaysia's official pandemic dashboard." />
+  <meta name="twitter:image" content="https://limhenry.xyz/images/projects/covidnow.webp" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%2226%22 font-size=%2228%22>🇲🇾</text></svg>" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            crimson: {
+              500: '#ef4444',
+              600: '#dc2626',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- DOMPurify for HTML sanitization -->
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    
+    /* Markdown typography inside release notes */
+    .markdown-body ul { list-style-type: disc; margin-left: 1.25rem; margin-top: 0.25rem; margin-bottom: 0.25rem; }
+    .markdown-body ol { list-style-type: decimal; margin-left: 1.25rem; margin-top: 0.25rem; margin-bottom: 0.25rem; }
+    .markdown-body li { margin-bottom: 0.25rem; }
+    .markdown-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.85em; padding: 0.15rem 0.35rem; border-radius: 0.25rem; }
+    .markdown-body a { color: #2563eb; text-decoration: underline; }
+    .markdown-body p { margin-bottom: 0.5rem; }
+    .markdown-body p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen antialiased font-sans">
+  
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-2xl shadow-sm border border-slate-200/80">
+          🇲🇾
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg tracking-tight text-slate-900">COVIDNOW</span>
+            <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-blue-100 text-blue-700">Archive</span>
+          </div>
+          <p class="text-xs text-slate-500 hidden sm:block">covidnow.moh.gov.my historical snapshots</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden bg-gradient-to-b from-blue-50/60 via-slate-50 to-slate-50 border-b border-slate-200/80 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100/80 text-blue-700 mb-4 border border-blue-200">
+        <span>🏛️</span> Ministry of Health Malaysia (MoH) Official Dashboard Archive
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-4">
+        COVIDNOW Historic Releases
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+        Journey through every merged pull request and release of Malaysia's official COVID-19 dashboard, paired with point-in-time snapshots captured by the Internet Archive Wayback Machine.
+      </p>
+
+      <!-- Direct Link to Wayback Machine (First Version) -->
+      <div class="inline-flex flex-col items-center justify-center text-center gap-3 bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm max-w-md mx-auto">
+        <div class="text-center">
+          <p class="text-xs font-semibold text-slate-500">Not interested in release notes?</p>
+          <p class="text-sm font-bold text-slate-900 mt-0.5">View the original site as it launched</p>
+        </div>
+        <a id="firstVersionLink"
+           href="https://web.archive.org/web/20210909092147/https://covidnow.moh.gov.my/" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white underline shadow-sm hover:shadow transition transform active:scale-95 whitespace-nowrap">
+          <svg class="w-4 h-4 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Open Wayback Machine (First Version)</span>
+          <svg class="w-3.5 h-3.5 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Container -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- About COVIDNOW Section -->
+    <section class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm mb-12">
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+          <span>💡</span> About COVIDNOW
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
+          What was COVIDNOW?
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Launched in <strong>2021</strong> and built and shipped to production in just <strong>3 weeks</strong> in collaboration with the Ministry of Health Malaysia, <strong>COVIDNOW</strong> (<code class="font-mono text-xs font-semibold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">covidnow.moh.gov.my</code>) served as Malaysia's official public data and analytics dashboard during the pandemic.
+        </p>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          The platform revolutionized national public health communication by moving away from static daily PDF press statements to an interactive, real-time, open-data dashboard. It delivered daily granular statistics on vaccination rollouts, hospital and ICU bed capacities, ventilator utilization, testing positivity, and fatalities across all 16 states and federal territories.
+        </p>
+
+        <!-- 3 Highlight Columns -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
+          <div class="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+            <span class="text-2xl">🤝</span>
+            <p class="text-sm font-bold text-slate-900 mt-2.5">Volunteer Developer Team</p>
+            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+              Built <em>pro bono</em> by 4 independent developers — 
+              <a href="https://linkedin.com/in/henrylim96" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold hover:text-blue-700">Henry Lim</a>, 
+              <a href="https://www.linkedin.com/in/calumlim/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold hover:text-blue-700">Calum Lim</a>, 
+              <a href="https://www.linkedin.com/in/shenghan/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold hover:text-blue-700">Lim Sheng Han</a>, and 
+              <a href="https://www.linkedin.com/in/roshen-maghhan-831b3498/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold hover:text-blue-700">Roshen Maghan</a> — in close partnership with Dr. Mahesh Appannan and the MoH Crisis Preparedness and Response Centre (CPRC) data team.
+            </p>
+          </div>
+          <div class="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+            <span class="text-2xl">⚡</span>
+            <p class="text-sm font-bold text-slate-900 mt-2.5">100M+ Views & 0 Downtime</p>
+            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">Served as the definitive daily source of truth for citizens, healthcare workers, and journalists with 100% uptime.</p>
+          </div>
+          <div class="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+            <span class="text-2xl">🌱</span>
+            <p class="text-sm font-bold text-slate-900 mt-2.5">Evolved into KKMNOW</p>
+            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">The open-data model established by COVIDNOW transitioned into <a href="https://data.moh.gov.my/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold hover:text-blue-700">KKMNOW</a>, expanding open data to national health metrics.</p>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="pt-1">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🛠️</span>
+              <span class="font-bold text-slate-900">Tech Stack</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-slate-500 font-semibold">Frontend:</span>
+              <span class="px-2.5 py-1 rounded-lg font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">Nuxt</span>
+              <span class="px-2.5 py-1 rounded-lg font-mono font-bold bg-sky-100 text-sky-800 border border-sky-200">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded-lg font-mono font-bold bg-amber-100 text-amber-800 border border-amber-200">Cloudflare Pages</span>
+              <span class="text-slate-300 mx-1.5 hidden sm:inline">|</span>
+              <span class="text-slate-500 font-semibold">Backend:</span>
+              <span class="px-2.5 py-1 rounded-lg font-mono font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- In the News & Press Coverage -->
+        <div class="pt-2">
+          <p class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+            Featured Press & Media Coverage
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <a href="https://www.nst.com.my/news/nation/2021/09/726457/heroes-lift-covid-veil-secrecy" 
+               target="_blank" rel="noopener noreferrer" 
+               class="group p-4 rounded-xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200/70 hover:border-blue-200 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider">New Straits Times</span>
+                <p class="text-xs sm:text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition mt-1">
+                  Heroes lift Covid 'veil of secrecy'
+                </p>
+              </div>
+              <div class="mt-3 flex items-center gap-1 text-[11px] font-semibold text-blue-600 group-hover:text-blue-700 underline">
+                <span>Read article</span>
+                <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform no-underline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+            </a>
+
+            <a href="https://www.malaymail.com/news/malaysia/2021/10/05/developers-of-covidnow-website-committed-to-helping-pro-bono-as-long-as-the/2010974" 
+               target="_blank" rel="noopener noreferrer" 
+               class="group p-4 rounded-xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200/70 hover:border-blue-200 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-red-600 uppercase tracking-wider">Malay Mail</span>
+                <p class="text-xs sm:text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition mt-1">
+                  Developers of CovidNow website committed to helping pro bono as long as they're needed
+                </p>
+              </div>
+              <div class="mt-3 flex items-center gap-1 text-[11px] font-semibold text-blue-600 group-hover:text-blue-700 underline">
+                <span>Read article</span>
+                <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform no-underline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preserved Launch Story Link -->
+      <div class="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500">
+        <span>Preserved Wayback Machine snapshot from launch day:</span>
+        <a href="https://web.archive.org/web/20210909092147/https://covidnow.moh.gov.my/about" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 underline">
+          <span>Read original launch story on Wayback Machine</span>
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Dashboard Preview & Milestone Highlights -->
+    <section class="mb-14">
+      <!-- Highlights Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-5">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-sm">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Over 100,000,000+ views</span>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200 shadow-sm">
+          <svg class="w-3.5 h-3.5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>0 downtime throughout operation</span>
+        </div>
+      </div>
+
+      <!-- Dashboard Screenshot -->
+      <div class="max-w-3xl mx-auto">
+        <img src="https://limhenry.xyz/images/projects/covidnow.webp" 
+             alt="COVIDNOW Official Dashboard Screenshot" 
+             class="w-full h-auto block" 
+             loading="lazy" />
+      </div>
+    </section>
+
+    <!-- Historic Releases Section Header -->
+    <div class="mb-6">
+      <h3 class="text-xl font-bold text-slate-900">Historic Releases & Snapshots</h3>
+      <p class="text-xs text-slate-500 mt-0.5">Every pull request paired with corresponding Wayback Machine snapshots</p>
+    </div>
+
+    <!-- Timeline List -->
+    <div id="timelineContainer" class="relative pl-8 border-l-2 border-slate-200 space-y-8"></div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-slate-200 py-8 text-center text-xs text-slate-500 space-y-2">
+    <p>
+      Built for the legacy of <span class="font-semibold text-slate-700">COVIDNOW</span> (Ministry of Health Malaysia).
+    </p>
+    <p>
+      Wayback Machine snapshots provided by the <a href="https://archive.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Internet Archive</a>.
+    </p>
+    <p class="pt-1">
+      <a href="https://github.com/limhenry/covidnow-archive" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-600 hover:text-blue-600 underline">
+        View on GitHub
+      </a>
+    </p>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button id="backToTopBtn" 
+          aria-label="Back to top"
+          class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-blue-600 border border-slate-200 shadow-md hover:shadow-lg backdrop-blur-md transition-all duration-200 opacity-0 pointer-events-none translate-y-3 flex items-center justify-center">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Application Logic -->
+  <script>
+    // Application State
+    let rawReleases = [];
+    const timelineContainer = document.getElementById('timelineContainer');
+    const firstVersionLink = document.getElementById('firstVersionLink');
+
+    // Date formatting helper
+    function formatDate(isoStr) {
+      if (!isoStr) return '';
+      const date = new Date(isoStr);
+      return date.toLocaleDateString('en-MY', {
+        timeZone: 'Asia/Kuala_Lumpur',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+
+    // Tag categorizer helper
+    function getTagCategory(title) {
+      const lower = (title || '').toLowerCase();
+      if (lower.startsWith('feat') || lower.includes('add:')) return { label: 'Feature', color: 'bg-emerald-100 text-emerald-700 border-emerald-200' };
+      if (lower.startsWith('fix') || lower.includes('fix:')) return { label: 'Bug Fix', color: 'bg-rose-100 text-rose-700 border-rose-200' };
+      if (lower.startsWith('update') || lower.includes('update:')) return { label: 'Update', color: 'bg-amber-100 text-amber-700 border-amber-200' };
+      if (lower.startsWith('merge')) return { label: 'Merge', color: 'bg-purple-100 text-purple-700 border-purple-200' };
+      return { label: 'Release', color: 'bg-blue-100 text-blue-700 border-blue-200' };
+    }
+
+    function renderReleases() {
+      // Sort newest first
+      const sorted = [...rawReleases].sort((a, b) => {
+        const timeA = new Date(a.mergedAt).getTime() || 0;
+        const timeB = new Date(b.mergedAt).getTime() || 0;
+        return timeB - timeA;
+      });
+
+      if (sorted.length === 0) {
+        timelineContainer.innerHTML = '<div class="py-12 text-center text-slate-500">No releases found.</div>';
+        return;
+      }
+
+      const cardsHtml = sorted.map(pr => {
+        const tag = getTagCategory(pr.title);
+        const isLaunch = pr.prNumber === 1;
+
+        let notesHtml = '';
+        if (pr.description && pr.description.trim()) {
+          const parsedMarkdown = marked.parse(pr.description.trim());
+          const cleanHtml = DOMPurify.sanitize(parsedMarkdown);
+          notesHtml = `
+            <div class="mt-3 markdown-body text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50/80 p-3.5 rounded-xl border border-slate-200/60">
+              ${cleanHtml}
+            </div>
+          `;
+        }
+
+        return `
+          <div class="relative group" id="pr-${pr.prNumber}">
+            <!-- Timeline Pin / Dot: exactly centered on timeline line -->
+            <div class="absolute -left-8 -translate-x-1/2 -ml-[1px] top-5 w-3.5 h-3.5 rounded-full border-2 border-white ${isLaunch ? 'bg-amber-500 ring-4 ring-amber-500/20' : 'bg-blue-600 ring-4 ring-blue-600/10'} shadow-sm transition"></div>
+
+            <!-- Card Box -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm">
+              
+              <!-- Card Top Row: Meta info & badges -->
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-lg text-xs font-mono font-bold bg-slate-100 text-slate-800">
+                    PR #${pr.prNumber}
+                  </span>
+
+                  <span class="px-2 py-0.5 text-xs font-semibold rounded-md border ${tag.color}">
+                    ${tag.label}
+                  </span>
+
+                  ${isLaunch ? '<span class="px-2 py-0.5 text-xs font-bold rounded-md bg-amber-100 text-amber-700 border border-amber-300">🚀 Launch Day</span>' : ''}
+                </div>
+
+                <!-- Merged Date -->
+                <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>${formatDate(pr.mergedAt)}</span>
+                </div>
+              </div>
+
+              <!-- Title -->
+              <h2 class="text-base sm:text-lg font-bold text-slate-900">
+                ${pr.title}
+              </h2>
+
+              <!-- Markdown Notes (if any) -->
+              ${notesHtml}
+
+              <!-- Wayback Machine Snapshot Action Row -->
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-end text-xs">
+                <a href="${pr.archiveUrl}" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 underline">
+                  <span>View Snapshot on Wayback Machine</span>
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      timelineContainer.innerHTML = cardsHtml;
+    }
+
+    // Fetch and initialize data
+    async function loadData() {
+      try {
+        const res = await fetch('./data/releases.json');
+        if (!res.ok) throw new Error('Failed to load releases.json: ' + res.status);
+        rawReleases = await res.json();
+
+        const firstVersion = rawReleases.find(r => r.prNumber === 1) || rawReleases[rawReleases.length - 1];
+        if (firstVersion && firstVersion.archiveUrl && firstVersionLink) {
+          firstVersionLink.href = firstVersion.archiveUrl.replace('http://', 'https://');
+        }
+        renderReleases();
+      } catch (err) {
+        console.error(err);
+        timelineContainer.innerHTML = `
+          <div class="py-8 text-center text-sm text-red-600 bg-red-50 rounded-xl border border-red-200">
+            Failed to load releases data. Please ensure this site is served over HTTP/HTTPS.
+          </div>
+        `;
+      }
+    }
+
+    loadData();
+
+    // Back to top scroll listener
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      } else {
+        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

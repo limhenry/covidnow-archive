@@ -1,0 +1,268 @@
+[
+  {
+    "prNumber": 49,
+    "title": "feat: child vaccination cards and table",
+    "description": "- [home/vax summary] add: children vax\r\n- [home/vax summary] update: show pop sublabel\r\n- [vax/vax daily] remove: remove %\r\n- [vax/vax progress] add: children vax\r\n- [vax/vax table] add: children vax\r\n- [deaths] fix: missing time limit sublabel",
+    "mergedAt": "2022-02-08T19:56:31Z",
+    "archiveUrl": "http://web.archive.org/web/20220208224237/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 48,
+    "title": "update: dose 3 definition",
+    "description": null,
+    "mergedAt": "2022-01-22T02:28:05Z",
+    "archiveUrl": "http://web.archive.org/web/20220122012535/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 47,
+    "title": "update: vaccination i18n and card cleanup",
+    "description": "**Update:** \r\n - bump dependencies\r\n - vax i18n (replace `fully/partially vax` to `dose 1, 2, 3, etc`)\r\n \r\n**Remove:**\r\n - vax projection card\r\n - vax progress card\r\n - at a glance - fully vax\r\n - i18n dict cleanup",
+    "mergedAt": "2022-01-18T07:57:12Z",
+    "archiveUrl": "http://web.archive.org/web/20220118004555/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 46,
+    "title": "update: booster dose terminology in i18n",
+    "description": " - update i18n: Terima Penggalak -> Lengkap Dos Penggalak",
+    "mergedAt": "2021-12-18T10:38:09Z",
+    "archiveUrl": "http://web.archive.org/web/20211218015029/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 45,
+    "title": "update: booster percentage on home grid and tables",
+    "description": "- [home vax grid] show booster %\r\n- [vax table] show booster %\r\n- [card] update filter checkbox css\r\n- [modal] increase max-width\r\n- [cleanup] remove unused code\r\n- [cases/deaths] remove nat, gender, vax status bar chart",
+    "mergedAt": "2021-12-18T09:30:26Z",
+    "archiveUrl": "http://web.archive.org/web/20211218015029/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 41,
+    "title": "update: age incidence table HSL interpolation",
+    "description": "- [age incidence] change hsl interpolation algo ([codepen](https://codepen.io/limhenry/full/jOLRmaq))\r\n- [home] remove: school vax banner\r\n- [home] update: svg icons color",
+    "mergedAt": "2021-11-24T21:28:47Z",
+    "archiveUrl": "http://web.archive.org/web/20211125023420/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 40,
+    "title": "feat: cases and deaths by age group table",
+    "description": "- add: cases/deaths by age group table (age incidence)\r\n- remove: cases/deaths by age group bar chart\r\n- remove: vaccine effectiveness note\r\n- update: swap cases/deaths by gender/nationality order\r\n",
+    "mergedAt": "2021-11-21T00:03:32Z",
+    "archiveUrl": "http://web.archive.org/web/20211121012154/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 39,
+    "title": "fix: scroll position reset on page switch",
+    "description": " - scroll y position should set to 0 when switching page between cases/deaths and hc (vent, icu, hospital)",
+    "mergedAt": "2021-11-19T04:16:21Z",
+    "archiveUrl": "http://web.archive.org/web/20211118235850/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 38,
+    "title": "feat: display location in cluster table",
+    "description": " - [Cluster] Show location",
+    "mergedAt": "2021-11-12T05:22:33Z",
+    "archiveUrl": "http://web.archive.org/web/20211112063708/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 37,
+    "title": "feat: cluster and age incidence tables",
+    "description": "Added:\r\n- [Cases] Cluster Table\r\n- [Cases/Deaths] Age Incidence Table _(Currently not showing)_",
+    "mergedAt": "2021-11-11T22:11:19Z",
+    "archiveUrl": "http://web.archive.org/web/20211111230845/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 35,
+    "title": "update: snapshot table per capita and i18n",
+    "description": "- [Home/Snapshot] Update cases per capita (`this.pc.cases_7d.actual_data`)\n- [Home/i18n] Fix typo (`until` -> `untuk`)",
+    "mergedAt": "2021-10-30T10:23:27Z",
+    "archiveUrl": "http://web.archive.org/web/20211030182626/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 34,
+    "title": "fix: vaccination table category mapping",
+    "description": null,
+    "mergedAt": "2021-10-24T06:03:44Z",
+    "archiveUrl": "http://web.archive.org/web/20211024014505/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 33,
+    "title": "feat: snapshot table and updated vax table design",
+    "description": "- [Home] Add snapshot table\r\n- [Vax] Update vax table design \r\n- [Capita] Change to 0dp\r\n- [Misc] Fix tailwind responsive (xs) config",
+    "mergedAt": "2021-10-20T16:05:28Z",
+    "archiveUrl": "http://web.archive.org/web/20211020234902/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 31,
+    "title": "feat: custom message for vax per capita bar chart",
+    "description": null,
+    "mergedAt": "2021-10-18T06:12:22Z",
+    "archiveUrl": "http://web.archive.org/web/20211018062237/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 30,
+    "title": "feat: daily booster vaccination chart",
+    "description": null,
+    "mergedAt": "2021-10-17T14:11:33Z",
+    "archiveUrl": "http://web.archive.org/web/20211017161127/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 29,
+    "title": "feat: booster shots tracking and school vaccination page",
+    "description": "- [School] Update i18n, add excel template file\r\n- [Home/Vax Chart] Add booster shot\r\n- [Vax] Add booster shot\r\n- [Vax] Show fully vax adolescents on bar chart",
+    "mergedAt": "2021-10-15T16:52:50Z",
+    "archiveUrl": "http://web.archive.org/web/20211015172419/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 27,
+    "title": "update: school page UI and i18n",
+    "description": "- [School] update i18n\r\n- [School] minor tweak ui",
+    "mergedAt": "2021-10-10T03:52:08Z",
+    "archiveUrl": "http://web.archive.org/web/20211010042112/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 24,
+    "title": "update: hospital page i18n",
+    "description": null,
+    "mergedAt": "2021-10-06T14:44:55Z",
+    "archiveUrl": "http://web.archive.org/web/20211006133817/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 21,
+    "title": "fix: BID and inpatient tooltip label mappings",
+    "description": "- [Deaths] Fix inverted BID and Inpatient tooltip labels",
+    "mergedAt": "2021-10-06T04:42:37Z",
+    "archiveUrl": "http://web.archive.org/web/20211006102525/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 20,
+    "title": "update: remove daily label from deaths charts",
+    "description": "- [Home] Remove \"daily\" from deaths chart\r\n- [Deaths] Remove \"daily\" from deaths charts",
+    "mergedAt": "2021-10-05T05:35:15Z",
+    "archiveUrl": "http://web.archive.org/web/20211005092918/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 19,
+    "title": "fix: typo in case fatality rate label",
+    "description": "- Fix typo in fatality rate label",
+    "mergedAt": "2021-10-04T09:25:00Z",
+    "archiveUrl": "http://web.archive.org/web/20211004093522/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 18,
+    "title": "fix: chart x-axis labels and deaths chart title",
+    "description": "- [Chart] Showing better x-axis label for 2 months and 2 weeks\r\n- [Home] Deaths Chart title\r\n- [Deaths] Deaths Chart title",
+    "mergedAt": "2021-10-04T08:23:42Z",
+    "archiveUrl": "http://web.archive.org/web/20211004093522/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 17,
+    "title": "fix: cases and deaths vaccination status tooltips",
+    "description": "- [Cases] Cases by Vaccination Status chart tooltip\r\n- [Deaths] Deaths by Vaccination Status chart tooltip",
+    "mergedAt": "2021-10-04T04:36:34Z",
+    "archiveUrl": "http://web.archive.org/web/20211004093522/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 16,
+    "title": "fix: healthcare bar category text",
+    "description": null,
+    "mergedAt": "2021-10-04T01:34:31Z",
+    "archiveUrl": "http://web.archive.org/web/20211004093522/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 15,
+    "title": "fix: daily case fatality rate calculation",
+    "description": null,
+    "mergedAt": "2021-10-03T18:08:08Z",
+    "archiveUrl": "http://web.archive.org/web/20211004093522/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 14,
+    "title": "update: deaths and cases pages",
+    "description": null,
+    "mergedAt": "2021-10-03T17:41:23Z",
+    "archiveUrl": "http://web.archive.org/web/20211004093522/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 13,
+    "title": "fix: child vaccination table sorting",
+    "description": null,
+    "mergedAt": "2021-10-02T13:44:30Z",
+    "archiveUrl": "http://web.archive.org/web/20211002105226/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 12,
+    "title": "update: adolescent vaccination bar and status bar color",
+    "description": "- [Vax/Bar] Update adolescents vax bar % number\n- [Card] Code clean up\n- Set Safari status bar color to `black`\n- Generate vax page for KUL, PJY and SGR",
+    "mergedAt": "2021-09-24T10:57:59Z",
+    "archiveUrl": "http://web.archive.org/web/20210923150839/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 11,
+    "title": "update: sticky column on vax table and GA events",
+    "description": "- [Vax/Vax Table] Freeze first column (Sticky)\r\n- [Vax/Vax Bar] Hide fully vax % for adolescents\r\n- [Vax/Projection] Update CSS Grid\r\n- [GA] Track Lang dropdown, Lang on load, Vax table open event",
+    "mergedAt": "2021-09-23T04:51:33Z",
+    "archiveUrl": "http://web.archive.org/web/20210922223758/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 9,
+    "title": "feat: adolescent vaccination data and state progress table",
+    "description": "Add:\r\n - Modal component\r\n - Download JSON/CSV Component (not enabled)\r\n - [Home] Active cases card hover styling (not enabled)\r\n - [Home/Vax] Adolescents vax data\r\n - [Vax] Vax Progress by State (Progress bar)\r\n - [Vax] Vax Progress by State (Table)\r\n\r\nFix:\r\n - [All] Penang State Order\r\n - [Vax] Vax Projection Timezone bug",
+    "mergedAt": "2021-09-23T03:39:10Z",
+    "archiveUrl": "http://web.archive.org/web/20210922223758/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 8,
+    "title": "update: remove actual deaths tooltip from charts",
+    "description": " - [Home/Deaths] Remove \"Actual Deaths\" from chart tooltip",
+    "mergedAt": "2021-09-17T10:48:50Z",
+    "archiveUrl": "http://web.archive.org/web/20210917132540/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 7,
+    "title": "fix: healthcare date bug and add smooth_actual deaths tooltip",
+    "description": "- [Home/Death Card]: Add `smooth_actual` tooltip\n- [HC/All] Fix date bug\n- [HC/Deaths] Fix code quality and linting",
+    "mergedAt": "2021-09-14T11:31:36Z",
+    "archiveUrl": "http://web.archive.org/web/20210914121621/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 6,
+    "title": "fix: healthcare page MultipleChart date series",
+    "description": null,
+    "mergedAt": "2021-09-14T07:39:01Z",
+    "archiveUrl": "http://web.archive.org/web/20210914063656/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 5,
+    "title": "feat: COVID utilisation chart and fix capita sorting bug",
+    "description": "- [Home/ICU, Hosp Chart] Added COVID Utilisation\n- [Home, HC] Fix Capita Sorting Bug (Firefox)\n- [Home/Active Cases] Fix performance lag on Firefox",
+    "mergedAt": "2021-09-12T12:40:36Z",
+    "archiveUrl": "http://web.archive.org/web/20210912143824/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 4,
+    "title": "update: 7-day moving average label for actual deaths",
+    "description": null,
+    "mergedAt": "2021-09-12T02:54:42Z",
+    "archiveUrl": "http://web.archive.org/web/20210912031840/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 3,
+    "title": "feat: reported vs actual death series for healthcare page",
+    "description": null,
+    "mergedAt": "2021-09-11T18:21:36Z",
+    "archiveUrl": "http://web.archive.org/web/20210912012525/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 2,
+    "title": "fix: font bug, typos, and update i18n",
+    "description": "- Font: Change to Google Fonts, add fallback fonts\r\n- Home/Active Card: Update ICU i18n and tooltip\r\n- Home/MultiCapita Card: Deep copy `locations`, remove img lazy load, minor tweak UI\r\n- Vax/Summary Card: Update i18n\r\n- Vax/Chart: Fix `max-len` bug\r\n- All: Fix \"penggunaan\" typo\r\n- About: Update alt text",
+    "mergedAt": "2021-09-10T16:42:52Z",
+    "archiveUrl": "http://web.archive.org/web/20210910190513/https://covidnow.moh.gov.my/"
+  },
+  {
+    "prNumber": 1,
+    "title": "feat: launch day 🎉",
+    "description": "- First release built and shipped to production in just 3 weeks",
+    "mergedAt": "2021-09-09T00:41:45Z",
+    "archiveUrl": "http://web.archive.org/web/20210909092147/https://covidnow.moh.gov.my/"
+  }
+]

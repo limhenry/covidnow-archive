@@ -1,0 +1,17 @@
+{
+  "name": "covidnow-archive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Historic release notes and Wayback Machine snapshot archive for COVIDNOW",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "serve src",
+    "serve": "serve src",
+    "generate": "node generate-archive.mjs"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^22.0.1",
+    "serve": "^14.2.4"
+  }
+}
